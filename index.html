@@ -38,12 +38,13 @@
           </li>
         </ul>
         
-        <form action="" id="form">
-          <div>
-            <label for="email">Email address</label><br>
-            <input id="email" name="email" type="email" placeholder="email@company.com"/>
+        <form action="" id="form" novalidate>
+          <div class="form-field">
+            <label for="email">Email address</label>
+            <label for="email" id="error-message" class="error-message"></label>
+            <input id="email" name="email" type="text" placeholder="email@company.com"/>
           </div>
-          <button>Subscribe to monthly newsletter</button>
+          <button type="submit">Subscribe to monthly newsletter</button>
         </form>
 
         
