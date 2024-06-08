@@ -294,6 +294,15 @@ main .photo img {
         border-radius: 0;
         padding-top: 100px;
       }
+
+    .success .success-photo {
+        padding-left: 30px;
+    }
+
+    .success h1,
+    .success p {
+        padding: 0 30px;
+    }
     
     .success h1 {
         font-size: 2.5rem;
@@ -303,8 +312,9 @@ main .photo img {
         top: 200px;
         margin-bottom: 0;
         width: 90%;
-        justify-self: flex-end;
         align-self: center;
+        position: relative;
+        bottom: 260px;
       }
 
 }
