@@ -1,6 +1,9 @@
 const form = document.getElementById("form");
 const errorMessage = document.getElementById('error-message');
 const emailInput = document.getElementById('email');
+const mainContainer = document.getElementById('main-container');
+const successContainer = document.getElementById('success');
+
 
 const handleSubmit = (e) => {
     e.preventDefault(e);
@@ -16,6 +19,7 @@ const handleSubmit = (e) => {
         if (email.value.match(validEmail)) {
             emailInput.style = '';
             errorMessage.innerHTML = ''; // HACER QUE HAGA ALGO CUANDO ESTÉ BIEN
+            success();
         } else if (email.value === '' || !validEmail.test(email)) {
             errorStyle();
         }; 
@@ -32,6 +36,30 @@ function errorStyle() {
     emailInput.style.backgroundColor = "var(--clr-lightomato)";
 }
 
-function desktopSuccess() {
+function success() {
+    successContainer.innerHTML = `
+      <div class="success-photo">
+        <img src="./assets/images/icon-success.svg" alt="#">
+      </div>
+      
+      <h1>Thanks for subscribing!</h1>
+
+      <p>A confirmation email has been sent to <b>${email.value}</b>. 
+        Please open it and click the button inside to confirm your subscription.
+      </p>
+
+      <div class="dismiss-button" id="dismiss-button">Dismiss message</div>
+    `
+    mainContainer.style.display = 'none';
+    successContainer.style.display = 'flex';
+
+    const dismissBtn = document.getElementById('dismiss-button');
+    function dismiss() {
+        successContainer.style.display = 'none';
+        mainContainer.style.display = 'flex';
+    }
     
+    dismissBtn.addEventListener('click', () => {
+        dismiss();
+    });
 }

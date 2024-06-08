@@ -17,7 +17,7 @@
 
     <!-- Sign-up form start -->
 
-    <main> 
+    <main id="main-container"> 
       <div class="mobile-photo">
         <img src="./assets/images/illustration-sign-up-mobile.svg" alt="">
       </div>
@@ -44,19 +44,30 @@
             <label for="email" id="error-message" class="error-message"></label>
             <input id="email" name="email" type="text" placeholder="email@company.com"/>
           </div>
-          <button type="submit">Subscribe to monthly newsletter</button>
+          <button type="submit" id="submit-button">Subscribe to monthly newsletter</button>
         </form>
-
-        
-        
-
-        
+   
       </div>
       <div class="photo">
         <img src="./assets/images/illustration-sign-up-desktop.svg" alt="">
       </div>
-
     </main>
+
+    <div class="success" id="success">
+
+      <!-- <div class="success-photo">
+        <img src="./assets/images/icon-success.svg" alt="#">
+      </div>
+      
+      <h1>Thanks for subscribing!</h1>
+
+      <p>A confirmation email has been sent to <b>ash@loremcompany.com</b> . 
+        Please open it and click the button inside to confirm your subscription.
+      </p> -->
+
+      <!-- <div class="dismiss-button" id="dismiss-button">Dismiss message</div>  -->
+
+    </div>
     
 
     <!-- Sign-up form end -->
